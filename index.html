@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="You are cordially invited to the wedding of Elara & Sebastian" />
+  <title>Elara & Sebastian — Forever Begins</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&family=Charmonman:wght@400;700&family=Prompt:wght@200;300;400&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════════
+       NAVIGATION DOT INDICATORS
+  ══════════════════════════════════════════ -->
+  <nav class="nav-dots" aria-label="Page sections">
+    <button class="nav-dot active" data-section="0" aria-label="Hero"></button>
+    <button class="nav-dot" data-section="1" aria-label="Details"></button>
+    <button class="nav-dot" data-section="2" aria-label="RSVP"></button>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 1 — HERO
+  ══════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+
+    <!-- Video Background -->
+    <div class="hero__video-wrap">
+      <video class="hero__video" src="assets/videos/wedding-hero.mp4" autoplay muted loop playsinline preload="auto"
+        poster="assets/images/hero-poster.jpg"></video>
+      <div class="hero__overlay"></div>
+    </div>
+
+    <!-- Decorative top rule -->
+    <div class="hero__top-rule">
+      <span class="rule-line"></span>
+      <span class="rule-ornament">✦</span>
+      <span class="rule-line"></span>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="hero__content">
+      <!-- <p class="hero__prelude reveal-fade">Together with their families</p> -->
+
+      <h1 class="hero__names reveal-fade delay-1">
+        <span class="name name--bride">NATCHAYA</span>
+        <span class="name__ampersand">&amp;</span>
+        <span class="name name--groom">PONGPAN</span>
+      </h1>
+
+      <div class="hero__date-wrap reveal-fade delay-2">
+        <span class="hero__rule-thin"></span>
+        <!-- <p class="hero__date">Saturday, the Fourteenth of June</p> -->
+        <!-- <p class="hero__year">Two Thousand &amp; Twenty-Five</p> -->
+        <p class="hero__year">20 DECEMBER 2026</p>
+        <span class="hero__rule-thin"></span>
+      </div>
+
+      <!-- <p class="hero__invite reveal-fade delay-3">cordially invite you to celebrate their union</p> -->
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="hero__scroll-cta">
+      <span class="scroll-text">Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION 2 — EVENT DETAILS
+  ══════════════════════════════════════════ -->
+  <section class="details" id="details">
+
+    <!-- Grain texture overlay -->
+    <div class="grain-overlay"></div>
+
+    <div class="details__inner">
+
+      <!-- Section header -->
+      <header class="section-header reveal-up">
+        <p class="eyebrow">The Celebration</p>
+        <h2 class="section-title">Event Details</h2>
+        <div class="title-ornament">
+          <span></span><span class="diamond">◆</span><span></span>
+        </div>
+      </header>
+
+      <!-- Couple portrait area -->
+      <!-- <div class="details__portrait reveal-up delay-1">
+        <div class="portrait-frame">
+          <img src="assets/images/couple.jpg" alt="Elara and Sebastian" class="portrait-img" />
+          <img src="assets/images/hero-poster.jpg" alt="Elara and Sebastian" class="portrait-img" />
+          <div class="portrait-border"></div>
+        </div>
+        <div class="portrait-names">
+          <span>Elara Fontaine</span>
+          <span class="amp-small">&amp;</span>
+          <span>Sebastian Holloway</span>
+        </div>
+      </div> -->
+
+      <!-- Info cards -->
+      <div class="details__cards">
+
+        <article class="detail-card reveal-up delay-1">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <!-- <h3 class="card-label">Date &amp; Time</h3> -->
+          <h3 class="card-label">Date</h3>
+          <p class="card-primary">20 December 2026</p>
+          <p class="card-secondary">An evening celebration</p>
+        </article>
+
+        <article class="detail-card reveal-up delay-2">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <h3 class="card-label">Location</h3>
+          <p class="card-primary">Inter Continental</p>
+          <p class="card-primary">Chiang Mai The Mea Ping</p>
+          <p class="card-secondary">153 Sridonchai Road,</p>
+          <p class="card-secondary">Chang Khlan, Muang,</p>
+          <p class="card-secondary">Chiang Mai 50100, Thailand</p>
+        </article>
+
+        <!-- <article class="detail-card reveal-up delay-3">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3 class="card-label">Dress Code</h3>
+          <p class="card-primary">Black Tie Optional</p>
+          <p class="card-secondary">Champagne &amp; ivory tones</p>
+          <p class="card-secondary">warmly encouraged</p>
+        </article> -->
+
+      </div>
+
+      <!-- Romantic quote -->
+      <!-- <blockquote class="details__quote reveal-up delay-2">
+        <p>"Whatever our souls are made of,<br>his and mine are the same."</p>
+        <cite>— Emily Brontë</cite>
+      </blockquote> -->
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION 3 — RSVP
+  ══════════════════════════════════════════ -->
+  <section class="rsvp" id="rsvp">
+
+    <!-- <div class="grain-overlay"></div> -->
+
+    <div class="rsvp__inner">
+
+      <!-- Section header -->
+      <header class="section-header reveal-up">
+        <!-- <p class="eyebrow">กรุณาตอบกลับภายในวันที่ 1 พฤษภาคม</p> -->
+        <h2 class="section-title">ยืนยันการเข้าร่วมงาน</h2>
+        <div class="title-ornament">
+          <span></span><span class="diamond">◆</span><span></span>
+        </div>
+      </header>
+
+      <!-- RSVP Form -->
+      <div class="rsvp__form-wrap reveal-up delay-1">
+
+        <div class="form-card" id="rsvp-form-card">
+
+          <!-- The form -->
+          <div id="form-container">
+            <div class="form-group">
+              <label class="form-label" for="guest-name">ชื่อ-นามสกุล</label>
+              <input class="form-input" type="text" id="guest-name" name="guest-name" placeholder="เช่น สมชาย ใจดี"
+                autocomplete="name" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="guest-nickname">ชื่อเล่น</label>
+              <input class="form-input" type="text" id="guest-nickname" name="guest-nickname" placeholder="เช่น มุก"
+                autocomplete="nickname" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="phone">เบอร์โทรศัพท์</label>
+              <input class="form-input" type="tel" id="phone" name="phone" placeholder="081-234-5678"
+                autocomplete="tel" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">ยืนยันการเข้าร่วมงาน</label>
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input type="radio" name="attendance" value="attending" />
+                  <span class="radio-custom"></span>
+                  <span class="radio-text">เข้าร่วม</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="attendance" value="declines" />
+                  <span class="radio-custom"></span>
+                  <span class="radio-text">ไม่สามารถเข้าร่วมได้</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="guest-count">จำนวนผู้เข้าร่วม</label>
+                <select class="form-input form-select" id="guest-count" name="guest-count">
+                  <option value="1" selected>1 ท่าน</option>
+                  <option value="2">2 ท่าน (พร้อมผู้ติดตาม)</option>
+                  <option value="3">3 ท่าน (พร้อมผู้ติดตาม)</option>
+                  <option value="4">4 ท่าน (พร้อมผู้ติดตาม)</option>
+                  <option value="5">5 ท่าน (พร้อมผู้ติดตาม)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="guest-follow">ชื่อผู้ติดตาม (ถ้ามี)</label>
+                <input class="form-input" type="text" id="guest-follow" name="guest-follow"
+                  placeholder="เช่น นุ้ย, ตูน" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="notes">ข้อจำกัดด้านอาหาร / อาหารที่แพ้</label>
+              <textarea class="form-input form-textarea" id="notes" name="notes"
+                placeholder="เช่น แพ้อาหารทะเล, ไม่ทานเนื้อวัว" rows="4"></textarea>
+            </div>
+
+            <button class="btn-submit" id="rsvp-submit" type="button">
+              <span class="btn-text">ส่ง RSVP</span>
+              <span class="btn-icon">→</span>
+            </button>
+          </div>
+
+          <!-- Success message (hidden by default) -->
+          <div class="success-message" id="success-message" aria-live="polite">
+            <div class="success-icon">✦</div>
+            <h3 class="success-title">ขอบคุณสำหรับการตอบกลับ</h3>
+            <p class="success-body">
+              ทางเจ้าภาพจะติดต่อท่านอีกครั้ง<br />
+              แล้วพบกันในวันสำคัญของเรา!
+            </p>
+            <p class="success-names">— Natchaya &amp; Pongpan</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="remark">
+        <div class="remark-ornament">
+          <span></span><span class="diamond">◆</span><span></span>
+        </div>
+        <p class="remark-text">ทางเจ้าภาพจะติดต่อท่านอีกครั้ง<br />
+        <p class="remark-text">เพื่อจัดส่งการ์ดเชิญอย่างเป็นทางการ<br />
+        <!-- <strong>นัทชญา: 081-234-5678</strong> หรือ <strong>พงศ์พันธุ์: 089-765-4321</strong></p> -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-ornament">
+      <span class="rule-line"></span>
+      <span class="rule-ornament">✦</span>
+      <span class="rule-line"></span>
+    </div>
+    <p class="footer-names">Natchaya &amp; Pongpan</p>
+    <p class="footer-date">20 · 12 · 2026</p>
+    <p class="footer-copy">Crafted with love. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Wedding Invitation — Personal Card" />
+  <title>You Are Invited — Elara &amp; Sebastian</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Great+Vibes&family=Jost:wght@200;300;400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="card-style.css" />
+</head>
+<body>
+
+  <!-- ── VIDEO BACKGROUND ─────────────────────────────────── -->
+  <div class="video-bg">
+    <video
+      class="video-bg__film"
+      src="assets/videos/wedding-hero.mp4"
+      autoplay muted loop playsinline preload="auto"
+      poster="assets/images/hero-poster.jpg"
+    ></video>
+    <div class="video-bg__overlay"></div>
+  </div>
+
+  <!-- ── AMBIENT PARTICLES ─────────────────────────────────── -->
+  <canvas class="particles" id="particles" aria-hidden="true"></canvas>
+
+  <!-- ── ENVELOPE CARD ─────────────────────────────────────── -->
+  <main class="stage">
+
+    <!-- top seal ornament -->
+    <div class="stage__seal" aria-hidden="true">
+      <span class="seal-line"></span>
+      <svg class="seal-icon" viewBox="0 0 40 40" fill="none">
+        <path d="M20 4 L24 16 L37 16 L27 24 L31 36 L20 28 L9 36 L13 24 L3 16 L16 16 Z"
+              stroke="currentColor" stroke-width="0.8" fill="none"/>
+      </svg>
+      <span class="seal-line"></span>
+    </div>
+
+    <article class="card" role="region" aria-label="Personal invitation card">
+
+      <!-- Card inner -->
+      <div class="card__inner">
+
+        <!-- Script heading -->
+        <p class="card__script" aria-hidden="true">Wedding Invitation</p>
+
+        <!-- Thin divider -->
+        <div class="card__divider" aria-hidden="true">
+          <span></span><span class="divider-gem">◆</span><span></span>
+        </div>
+
+        <!-- Salutation -->
+        <p class="card__salutation">Dear / เรียนคุณ</p>
+
+        <!-- ★ Guest Name — injected by JS ★ -->
+        <h1 class="card__name" id="displayGuestName" aria-live="polite">
+          <!-- populated by card-logic.js -->
+        </h1>
+
+        <!-- Body copy -->
+        <p class="card__body">
+          Together with their families,<br />
+          <em>Elara &amp; Sebastian</em><br />
+          joyfully request the honour of your presence<br />
+          at their wedding celebration.
+        </p>
+
+        <!-- Date pill -->
+        <div class="card__date-pill" aria-label="Wedding date">
+          <span>14 · 06 · 2025</span>
+        </div>
+
+        <!-- CTA Button -->
+        <a class="card__cta" href="index.html" aria-label="Open full invitation">
+          <span class="cta__text">View Full Invitation</span>
+          <span class="cta__subtext">ดูรายละเอียดและลงทะเบียน</span>
+          <span class="cta__arrow" aria-hidden="true">→</span>
+          <span class="cta__glow" aria-hidden="true"></span>
+        </a>
+
+      </div><!-- /.card__inner -->
+
+      <!-- Corner ornaments -->
+      <span class="corner corner--tl" aria-hidden="true"></span>
+      <span class="corner corner--tr" aria-hidden="true"></span>
+      <span class="corner corner--bl" aria-hidden="true"></span>
+      <span class="corner corner--br" aria-hidden="true"></span>
+
+    </article>
+
+    <!-- Venue whisper -->
+    <p class="stage__venue">
+      Château de Lumière &nbsp;·&nbsp; Provence, France
+    </p>
+
+  </main>
+
+  <script src="card-logic.js"></script>
+</body>
+</html>
