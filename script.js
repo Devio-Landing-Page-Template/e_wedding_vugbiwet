@@ -123,15 +123,81 @@ if (heroVideo) {
   videoObserver.observe(heroVideo);
 }
 
+// Initialize phone input validation and attendance toggle
+setupPhoneInput();
+setupAttendanceToggle();
+
 /* ══════════════════════════════════════════════════════════════
    5. RSVP FORM — Validation & Submission
    ══════════════════════════════════════════════════════════════ */
+
+// Phone input - restrict to numbers only
+function setupPhoneInput() {
+  const phoneInput = document.getElementById('phone');
+  if (!phoneInput) return;
+
+  phoneInput.addEventListener('input', (e) => {
+    // Remove any non-numeric characters
+    e.target.value = e.target.value.replace(/[^\d]/g, '');
+  });
+
+  phoneInput.addEventListener('keypress', (e) => {
+    // Only allow numeric input
+    if (!/[\d]/.test(e.key)) {
+      e.preventDefault();
+    }
+  });
+}
+
+// Attendance radio - show/hide appropriate form sections
+function setupAttendanceToggle() {
+  const attendanceRadios = document.querySelectorAll('input[name="attendance"]');
+  const attendanceForm = document.getElementById('attendance-form');
+  const declineForm = document.getElementById('decline-form');
+  
+  if (!attendanceRadios.length || !attendanceForm || !declineForm) return;
+
+  function updateFormVisibility() {
+    const selected = document.querySelector('input[name="attendance"]:checked')?.value;
+    
+    if (selected === 'attending') {
+      attendanceForm.style.display = 'block';
+      declineForm.style.display = 'none';
+    } else if (selected === 'declines') {
+      attendanceForm.style.display = 'none';
+      declineForm.style.display = 'block';
+    } else {
+      attendanceForm.style.display = 'none';
+      declineForm.style.display = 'none';
+    }
+  }
+
+  attendanceRadios.forEach(radio => {
+    radio.addEventListener('change', updateFormVisibility);
+  });
+}
+
 function getFormData() {
+  const attendance = document.querySelector('input[name="attendance"]:checked')?.value;
+  
+  if (attendance === 'declines') {
+    // When declining, only require basic info
+    return {
+      name: document.getElementById('guest-name')?.value.trim(),
+      nickname: document.getElementById('guest-nickname')?.value.trim(),
+      phone: document.getElementById('phone')?.value.trim(),
+      attendance: attendance,
+      guests: '0',
+      followName: '',
+      notes: document.getElementById('notes')?.value.trim(),
+    };
+  }
+  
   return {
     name: document.getElementById('guest-name')?.value.trim(),
     nickname: document.getElementById('guest-nickname')?.value.trim(),
     phone: document.getElementById('phone')?.value.trim(),
-    attendance: document.querySelector('input[name="attendance"]:checked')?.value,
+    attendance: attendance,
     guests: document.getElementById('guest-count')?.value,
     followName: document.getElementById('guest-follow')?.value.trim(),
     notes: document.getElementById('notes')?.value.trim(),
@@ -192,6 +258,9 @@ function validateForm(data) {
   if (!data.phone) {
     showFieldError('phone', 'กรุณากรอกเบอร์โทรศัพท์');
     valid = false;
+  } else if (!/^\d+$/.test(data.phone)) {
+    showFieldError('phone', 'กรุณากรอกเบอร์โทรศัพท์เป็นตัวเลขเท่านั้น');
+    valid = false;
   }
 
   if (!data.attendance) {
@@ -217,12 +286,15 @@ function validateForm(data) {
     valid = false;
   }
 
-  if (!data.guests) {
-    showFieldError('guest-count', 'กรุณาเลือกจำนวนผู้เข้าร่วม');
-    valid = false;
-  } else if (parseInt(data.guests) > 1 && !data.followName) {
-    showFieldError('guest-follow', 'กรุณากรอกชื่อผู้ติดตาม');
-    valid = false;
+  // Only validate guest count and follow name if attending
+  if (data.attendance === 'attending') {
+    if (!data.guests) {
+      showFieldError('guest-count', 'กรุณาเลือกจำนวนผู้เข้าร่วม');
+      valid = false;
+    } else if (parseInt(data.guests) > 1 && !data.followName) {
+      showFieldError('guest-follow', 'กรุณากรอกชื่อผู้ติดตาม');
+      valid = false;
+    }
   }
 
   return valid;
