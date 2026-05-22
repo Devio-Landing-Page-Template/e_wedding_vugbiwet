@@ -132,6 +132,7 @@ body {
   font-family: var(--font-sans);
   font-weight: 200;
   font-size: clamp(10px, 1.4vw, 12px);
+  text-align: center;
   letter-spacing: 0.32em;
   text-transform: uppercase;
   color: var(--champagne);

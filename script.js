@@ -84,14 +84,28 @@ updateActiveDot();
    ══════════════════════════════════════════════════════════════ */
 const heroVideo = document.querySelector('.hero__video');
 
+/* Update poster based on viewport width */
+function updateVideoPoster() {
+  if (!heroVideo) return;
+  const isMobile = window.innerWidth <= 768;
+  const posterUrl = isMobile 
+    ? 'assets/images/hero-poster-phone.jpg' 
+    : 'assets/images/hero-poster.jpg';
+  heroVideo.poster = posterUrl;
+  // Also update background fallback
+  heroVideo.closest('.hero__video-wrap').style.backgroundImage =
+    `url('${posterUrl}')`;
+}
+
+updateVideoPoster();
+window.addEventListener('resize', updateVideoPoster);
+
 if (heroVideo) {
   // Force play if autoplay was blocked (common on iOS)
   const playPromise = heroVideo.play();
   if (playPromise !== undefined) {
     playPromise.catch(() => {
-      // Autoplay blocked — show poster image, video will play on user interaction
-      heroVideo.closest('.hero__video-wrap').style.backgroundImage =
-        "url('assets/images/hero-poster.jpg')";
+      // Autoplay blocked — video will play on user interaction
     });
   }
 

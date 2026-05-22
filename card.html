@@ -19,10 +19,12 @@
   <div class="video-bg">
     <video
       class="video-bg__film"
-      src="assets/videos/wedding-hero.mp4"
+      id="card-video"
       autoplay muted loop playsinline preload="auto"
-      poster="assets/images/hero-poster.jpg"
-    ></video>
+    >
+      <source media="(max-width: 768px)" src="assets/videos/wedding-hero-phone.mp4" type="video/mp4" />
+      <source src="assets/videos/wedding-hero.mp4" type="video/mp4" />
+    </video>
     <div class="video-bg__overlay"></div>
   </div>
 
@@ -66,14 +68,14 @@
         <!-- Body copy -->
         <p class="card__body">
           Together with their families,<br />
-          <em>Elara &amp; Sebastian</em><br />
+          <em>Natchaya &amp; Pongpan</em><br />
           joyfully request the honour of your presence<br />
           at their wedding celebration.
         </p>
 
         <!-- Date pill -->
         <div class="card__date-pill" aria-label="Wedding date">
-          <span>14 · 06 · 2025</span>
+          <span>20 · 12 · 2026</span>
         </div>
 
         <!-- CTA Button -->
@@ -96,7 +98,7 @@
 
     <!-- Venue whisper -->
     <p class="stage__venue">
-      Château de Lumière &nbsp;·&nbsp; Provence, France
+      Inter Continental &nbsp;·&nbsp; Chiang Mai, Thailand
     </p>
 
   </main>

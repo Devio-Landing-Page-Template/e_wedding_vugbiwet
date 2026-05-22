@@ -35,8 +35,10 @@
 
     <!-- Video Background -->
     <div class="hero__video-wrap">
-      <video class="hero__video" src="assets/videos/wedding-hero.mp4" autoplay muted loop playsinline preload="auto"
-        poster="assets/images/hero-poster.jpg"></video>
+      <video class="hero__video" id="hero-video" autoplay muted loop playsinline preload="auto">
+        <source media="(max-width: 768px)" src="assets/videos/wedding-hero-phone.mp4" type="video/mp4" />
+        <source src="assets/videos/wedding-hero.mp4" type="video/mp4" />
+      </video>
       <div class="hero__overlay"></div>
     </div>
 
@@ -262,25 +264,24 @@
           <div class="success-message" id="success-message" aria-live="polite">
             <div class="success-icon">✦</div>
             <h3 class="success-title">ขอบคุณสำหรับการตอบกลับ</h3>
-            <p class="success-body">
+            <!-- <p class="success-body">
               ทางเจ้าภาพจะติดต่อท่านอีกครั้ง<br />
               แล้วพบกันในวันสำคัญของเรา!
-            </p>
-            <p class="success-names">— Natchaya &amp; Pongpan</p>
+            </p> -->
+            <p class="success-names">Natchaya &amp; Pongpan</p>
           </div>
 
         </div>
 
       </div>
 
-      <div class="remark">
+      <!-- <div class="remark">
         <div class="remark-ornament">
           <span></span><span class="diamond">◆</span><span></span>
         </div>
         <p class="remark-text">ทางเจ้าภาพจะติดต่อท่านอีกครั้ง<br />
         <p class="remark-text">เพื่อจัดส่งการ์ดเชิญอย่างเป็นทางการ<br />
-        <!-- <strong>นัทชญา: 081-234-5678</strong> หรือ <strong>พงศ์พันธุ์: 089-765-4321</strong></p> -->
-      </div>
+      </div> -->
 
     </div>
   </section>
