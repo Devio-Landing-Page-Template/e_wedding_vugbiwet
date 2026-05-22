@@ -209,8 +209,8 @@
 
             <div class="form-group">
               <label class="form-label" for="phone">เบอร์โทรศัพท์</label>
-              <input class="form-input" type="tel" id="phone" name="phone" placeholder="081-234-5678"
-                autocomplete="tel" />
+              <input class="form-input" type="tel" id="phone" name="phone" placeholder="0812345678"
+                inputmode="numeric" autocomplete="tel" />
             </div>
 
             <div class="form-group">
@@ -229,22 +229,34 @@
               </div>
             </div>
 
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="guest-count">จำนวนผู้เข้าร่วม</label>
-                <select class="form-input form-select" id="guest-count" name="guest-count">
-                  <option value="1" selected>1 ท่าน</option>
-                  <option value="2">2 ท่าน (พร้อมผู้ติดตาม)</option>
-                  <option value="3">3 ท่าน (พร้อมผู้ติดตาม)</option>
-                  <option value="4">4 ท่าน (พร้อมผู้ติดตาม)</option>
-                  <option value="5">5 ท่าน (พร้อมผู้ติดตาม)</option>
-                </select>
-              </div>
+            <div id="attendance-form" style="display: none;">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="guest-count">จำนวนผู้เข้าร่วม</label>
+                  <select class="form-input form-select" id="guest-count" name="guest-count">
+                    <option value="">-- เลือก --</option>
+                    <option value="1" selected>1 ท่าน</option>
+                    <option value="2">2 ท่าน (พร้อมผู้ติดตาม)</option>
+                    <option value="3">3 ท่าน (พร้อมผู้ติดตาม)</option>
+                    <option value="4">4 ท่าน (พร้อมผู้ติดตาม)</option>
+                    <option value="5">5 ท่าน (พร้อมผู้ติดตาม)</option>
+                  </select>
+                </div>
 
+                <div class="form-group">
+                  <label class="form-label" for="guest-follow">ชื่อผู้ติดตาม (ถ้ามี)</label>
+                  <input class="form-input" type="text" id="guest-follow" name="guest-follow"
+                    placeholder="เช่น นุ้ย, ตูน" />
+                </div>
+              </div>
+            </div>
+
+            <div id="decline-form" style="display: none;">
               <div class="form-group">
-                <label class="form-label" for="guest-follow">ชื่อผู้ติดตาม (ถ้ามี)</label>
-                <input class="form-input" type="text" id="guest-follow" name="guest-follow"
-                  placeholder="เช่น นุ้ย, ตูน" />
+                <label class="form-label" for="guest-count-decline">จำนวนผู้เข้าร่วม</label>
+                <select class="form-input form-select" id="guest-count-decline" name="guest-count" disabled>
+                  <option value="0" selected>ไม่สามารถเข้าร่วมได้</option>
+                </select>
               </div>
             </div>
 
