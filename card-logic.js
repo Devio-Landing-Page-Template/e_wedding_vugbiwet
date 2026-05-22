@@ -55,6 +55,28 @@
 
 
 /* ══════════════════════════════════════════════════════════════
+   1.5 VIDEO POSTER — Responsive based on viewport
+   ══════════════════════════════════════════════════════════════ */
+(function updateVideoPoster() {
+  const video = document.getElementById('card-video');
+  if (!video) return;
+
+  function setPoster() {
+    const isMobile = window.innerWidth <= 768;
+    const posterUrl = isMobile 
+      ? 'assets/images/hero-poster-phone.jpg' 
+      : 'assets/images/hero-poster.jpg';
+    video.poster = posterUrl;
+    // Also update background fallback for autoplay blocked case
+    video.closest('.video-bg').style.backgroundImage = `url('${posterUrl}')`;
+  }
+
+  setPoster();
+  window.addEventListener('resize', setPoster);
+})();
+
+
+/* ══════════════════════════════════════════════════════════════
    2. PARTICLE CANVAS — Floating gold dust
    ══════════════════════════════════════════════════════════════ */
 (function initParticles() {
