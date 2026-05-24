@@ -333,7 +333,7 @@ function showSuccess() {
 }
 
 // ใส่ URL ของ Google Apps Script Web App ที่ได้จากการ Deploy ที่นี่
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxpxfpaDLb9x2kCjJZqmkClLCc4uMoyl3T89mfQe1JMV0aQ9vWFsDbhXRsHt2fBnwrTpA/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxZsP_b7SYjvW7haBqf2sFfp2FSLxF_3J_QBGOYZGGI0r1Cw1iVwoSb4NU-JTpiBOit/exec';
 
 if (submitBtn) {
   submitBtn.addEventListener('click', async () => {
