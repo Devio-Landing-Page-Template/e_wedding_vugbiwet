@@ -1,4 +1,4 @@
-# 💍 Elara & Sebastian — Wedding Invitation Website
+# 💍 Natchaya & Pongpan — Wedding Invitation Website
 
 **ยินดีต้อนรับสู่โปรเจกต์เว็บไซต์คำเชิญแต่งงานแบบหรูหรา**
 
@@ -100,9 +100,9 @@ e_wedding_vugbiwet/
 ```html
 <!-- เปลี่ยนชื่อคู่แต่งงาน -->
 <h1 class="hero__title">
-  <span>Elara</span>  ← เปลี่ยนชื่อจากที่นี่
+  <span>Natchaya</span>  ← เปลี่ยนชื่อจากที่นี่
   <span class="hearts">&nbsp;♥&nbsp;</span>
-  <span>Sebastian</span>
+  <span>Pongpan</span>
 </h1>
 
 <!-- เปลี่ยนวันที่แต่งงาน -->
@@ -290,7 +290,7 @@ closeBtn.addEventListener('click', () => {
 
 ```html
 <!-- ใน index.html ค้นหาและแก้ไข: -->
-<h1>Elara & Sebastian</h1>  ← เปลี่ยนเป็น ชื่อคู่ของคุณ
+<h1>Natchaya & Pongpan</h1>  ← เปลี่ยนเป็น ชื่อคู่ของคุณ
 ```
 
 ### 2️⃣ **เปลี่ยนสี**
@@ -499,7 +499,7 @@ font-family: 'Cormorant Garamond', 'Jost', 'Prompt';
 
 ## ©️ **สิทธิ์**
 
-โปรเจกต์นี้เป็นการออกแบบและพัฒนาแบบเฉพาะสำหรับแต่งงาน **Elara & Sebastian** 
+โปรเจกต์นี้เป็นการออกแบบและพัฒนาแบบเฉพาะสำหรับแต่งงาน **Natchaya & Pongpan** 
 ห้ามนำไปใช้เพื่อวัตถุประสงค์เชิงพาณิชย์โดยไม่ได้รับอนุญาต
 
 ---
